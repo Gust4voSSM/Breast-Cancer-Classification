@@ -27,7 +27,7 @@ class Modelo(ABC):
 
 class KNNModelo(Modelo):
     def train(self, *, X_train, y_train, X_test, y_test, metrica='accuracy'):
-        print(f"\nBuscando melhor valor de k para KNN com validação cruzada (métrica: {metrica})...")
+        #print(f"\nBuscando melhor valor de k para KNN com validação cruzada (métrica: {metrica})...")
         param_grid = {'n_neighbors': list(range(1, 6))}
         grid = model_selection.GridSearchCV(
             neighbors.KNeighborsClassifier(),
@@ -36,22 +36,11 @@ class KNNModelo(Modelo):
             scoring=metrica
         )
         grid.fit(X_train, y_train)
-        print(f"Melhor k encontrado: {grid.best_params_['n_neighbors']}")
-        print(f"Média na validação cruzada ({metrica}): {grid.best_score_:.4f}")
-        
-        # Calcular score no conjunto de treino
-        train_score = grid.best_estimator_.score(X_train, y_train)
-        test_score = grid.best_estimator_.score(X_test, y_test)
-        print(f"{metrica.capitalize()} no conjunto de treino: {train_score:.4f}")
-        print(f"{metrica.capitalize()} no conjunto de teste: {test_score:.4f}")
-        
-        # Adicionar score de treino ao objeto grid para compatibilidade
-        grid.train_score_ = train_score
         return grid
 
 class ArvoreDecisaoModelo(Modelo):
     def train(self, *, X_train, y_train, X_test, y_test, metrica='accuracy'):
-        print(f"\nBuscando melhores hiperparâmetros para árvore de decisão com validação cruzada (métrica: {metrica})...")
+        #print(f"\nBuscando melhores hiperparâmetros para árvore de decisão com validação cruzada (métrica: {metrica})...")
         param_grid = {
             'max_depth': [None, 3, 5, 10, 15],
             'min_samples_split': [2, 5, 10],
@@ -64,17 +53,6 @@ class ArvoreDecisaoModelo(Modelo):
             scoring=metrica
         )
         grid.fit(X_train, y_train)
-        print(f"Melhores parâmetros encontrados: {grid.best_params_}")
-        print(f"Média na validação cruzada ({metrica}): {grid.best_score_:.4f}")
-        
-        # Calcular score no conjunto de treino
-        train_score = grid.best_estimator_.score(X_train, y_train)
-        test_score = grid.best_estimator_.score(X_test, y_test)
-        print(f"{metrica.capitalize()} no conjunto de treino: {train_score:.4f}")
-        print(f"{metrica.capitalize()} no conjunto de teste: {test_score:.4f}")
-        
-        # Adicionar score de treino ao objeto grid para compatibilidade
-        grid.train_score_ = train_score
         return grid
 
 class VisualizadorInterativo:
@@ -268,6 +246,15 @@ class VisualizadorInterativo:
                            bbox=dict(boxstyle="round,pad=0.3", facecolor=self.cores.get(modelo, 'gray'), alpha=0.3))
                 y_pos -= 0.06
 
+def print_resumo_resultados(resultados):
+    print("\nResumo dos resultados:")
+    for nome_modelo, res_mod in resultados.items():
+        print(f"\nModelo: {nome_modelo}")
+        for proporcao, res_prop in res_mod.items():
+            print(f"  Proporção treino/teste: {proporcao}")
+            for _, res in res_prop.items():
+                print(f"Treino={res['score_treino']:.4f}, Teste={res['score_teste']:.4f}")
+
 def main():
     print("Importando dataset...")
     data = pd.read_csv("data/wdbc.data", header=None)
@@ -314,22 +301,25 @@ def main():
                 continue
             print(f"Tamanho treino: {X_train.shape[0]}")
             print(f"Tamanho teste: {X_test.shape[0]}")
+            params = {
+                'X_train': X_train,
+                'y_train': y_train,
+                'X_test': X_test,
+                'y_test': y_test
+            }
             for nome_modelo, modelo in modelos:
-                print(f"\n==== {nome_modelo} ====")
+                #print(f"\n==== {nome_modelo} ====")
                 if nome_modelo not in resultados:
                     resultados[nome_modelo] = {}
                 if f"{int(prop_treino*100)}%/{int(prop_teste*100)}%" not in resultados[nome_modelo]:
                     resultados[nome_modelo][f"{int(prop_treino*100)}%/{int(prop_teste*100)}%"] = {}
                 for metrica in metricas:
-                    print(f"\n--- Avaliando métrica: {metrica} ---")
-                    params = {
-                        'X_train': X_train,
-                        'y_train': y_train,
-                        'X_test': X_test,
-                        'y_test': y_test,
-                        'metrica': metrica
-                    }
+                    params['metrica'] = metrica
+                    #print(f"\n--- Avaliando métrica: {metrica} ---")
                     grid = modelo.train(**params)
+                    best_estimator = grid.best_estimator_
+                    score_treino = best_estimator.score(X_train, y_train)
+                    score_teste = best_estimator.score(X_test, y_test)
                     if nome_modelo == "KNN":
                         melhor = grid.best_params_['n_neighbors']
                     else:
@@ -337,20 +327,14 @@ def main():
                     resultados[nome_modelo][f"{int(prop_treino*100)}%/{int(prop_teste*100)}%"].setdefault(metrica, {})
                     resultados[nome_modelo][f"{int(prop_treino*100)}%/{int(prop_teste*100)}%"] [metrica] = {
                         'melhor_param': melhor,
-                        'score_treino': grid.train_score_,
-                        'score_teste': grid.best_estimator_.score(X_test, y_test)
+                        'score_treino': score_treino,
+                        'score_teste': score_teste
                     }
         with open(resultados_path, "w") as f:
             json.dump(resultados, f, indent=2)
 
-    print("\nResumo dos resultados:")
-    for nome_modelo, res_mod in resultados.items():
-        print(f"\nModelo: {nome_modelo}")
-        for proporcao, res_prop in res_mod.items():
-            print(f"  Proporção treino/teste: {proporcao}")
-            for metrica, res in res_prop.items():
-                print(f"    {metrica.capitalize()}: melhor_param={res['melhor_param']}, "
-                      f"Treino={res['score_treino']:.4f}, Teste={res['score_teste']:.4f}")
+    # print_resumo_resultados(resultados)
+                      
     
     # Inicializar visualizador interativo
     print("\n[INFO] Abrindo visualizador interativo...")
