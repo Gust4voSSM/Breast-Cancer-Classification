@@ -3,8 +3,10 @@ from sklearn import (
     tree,
     naive_bayes,
     linear_model,
-    neighbors
+    neighbors,
 )
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
 import pandas as pd
 from abc import ABC, abstractmethod
 import os
@@ -53,6 +55,49 @@ class ArvoreDecisaoModelo(Modelo):
         grid.fit(X_train, y_train)
         return grid
 
+class NaiveBayesModelo(Modelo):
+    def __init__(self):
+        super().__init__("Naive Bayes")
+        self.classificador = GaussianNB()
+
+    def train(self, *, X_train, y_train, X_test, y_test, metrica='accuracy'):
+        from sklearn.naive_bayes import GaussianNB
+        grid = model_selection.GridSearchCV(
+            GaussianNB(),
+            param_grid={},  # não tem hiperparâmetros
+            cv=5,
+            scoring=metrica
+        )
+        grid.fit(X_train, y_train)
+        return grid
+
+class RegressaoLogisticaModelo(Modelo):
+    def __init__(self):
+        super().__init__("Regressão Logística")
+        self.classificador = LogisticRegression(
+            solver='liblinear',  # bom para conjuntos pequenos
+            penalty='l2',
+            max_iter=1000,
+            random_state=42
+        )
+
+    def train(self, *, X_train, y_train, X_test, y_test, metrica='accuracy'):
+        from sklearn.linear_model import LogisticRegression
+        param_grid = {
+            'C': [0.01, 0.1, 1, 10, 100],
+            'solver': ['liblinear'],
+            'penalty': ['l2'],
+            'max_iter': [1000]
+        }
+        grid = model_selection.GridSearchCV(
+            LogisticRegression(random_state=42),
+            param_grid,
+            cv=5,
+            scoring=metrica
+        )
+        grid.fit(X_train, y_train)
+        return grid
+
 def print_resumo_resultados(resultados):
     print("\nResumo dos resultados:")
     for nome_modelo, res_mod in resultados.items():
@@ -76,8 +121,11 @@ def treinar_modelos(resultados_path="resultados_grid.json"):
     metricas = ['accuracy', 'f1', 'recall', 'precision']
     modelos = [
         ("KNN", KNNModelo()),
-        ("Árvore de Decisão", ArvoreDecisaoModelo())
+        ("Árvore de Decisão", ArvoreDecisaoModelo()),
+        ("Naive Bayes", NaiveBayesModelo()),
+        ("Regressão Logística", RegressaoLogisticaModelo())
     ]
+    
     proporcoes = [(treino/100, 1-treino/100) for treino in range(5, 100, 5)]
     resultados = {}
     for prop_treino, prop_teste in proporcoes:
