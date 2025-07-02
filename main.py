@@ -77,14 +77,6 @@ def main():
     y = data.iloc[:, 1].values
     y = (y == 'M').astype(int) # Convertendo numérica (binário)
 
-    # Divisão estratificada; 70% treino, 30% teste
-    X_train, X_test, y_train, y_test = model_selection.train_test_split(
-        X, y, test_size=0.3, random_state=42, stratify=y
-    )
-
-    print(f"Tamanho treino: {X_train.shape[0]}")
-    print(f"Tamanho teste: {X_test.shape[0]}")
-
     metricas = ['accuracy', 'f1', 'recall', 'precision']
     modelos = [
         ("KNN", KNNModelo()),
