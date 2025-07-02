@@ -26,10 +26,9 @@ def treinar_knn_com_cv(*, X_train, y_train, X_test, y_test, metrica='accuracy'):
     grid.fit(X_train, y_train)
     print(f"Melhor k encontrado: {grid.best_params_['n_neighbors']}")
     print(f"Média na validação cruzada ({metrica}): {grid.best_score_:.4f}")
-    knn_best = grid.best_estimator_
-    test_acc = knn_best.score(X_test, y_test)
+    test_acc = grid.best_estimator_.score(X_test, y_test)
     print(f"{metrica.capitalize()} no conjunto de teste: {test_acc:.4f}")
-    return knn_best, grid
+    return grid
 
 
 def main():
@@ -64,11 +63,11 @@ def main():
             'y_test': y_test,
             'metrica': metrica
         }
-        knn_best, grid = treinar_knn_com_cv(**params)
+        grid = treinar_knn_com_cv(**params)
         resultados[metrica] = {
             'melhor_k': grid.best_params_['n_neighbors'],
             'score_cv': grid.best_score_,
-            'score_teste': knn_best.score(X_test, y_test)
+            'score_teste': grid.best_estimator_.score(X_test, y_test)
         }
 
     print("\nResumo dos resultados:")
