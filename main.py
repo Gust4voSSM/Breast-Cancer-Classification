@@ -7,9 +7,6 @@ from sklearn import (
 )
 import pandas as pd
 from abc import ABC, abstractmethod
-import matplotlib.pyplot as plt
-import matplotlib.widgets as mwidgets
-import numpy as np
 import os
 import json
 from visualizador import VisualizadorInterativo
