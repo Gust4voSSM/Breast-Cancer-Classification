@@ -65,7 +65,7 @@ def print_resumo_resultados(resultados):
             for _, res in res_prop.items():
                 print(f"Treino={res['score_treino']:.4f}, Teste={res['score_teste']:.4f}")
 
-def main():
+def treinar_modelos(resultados_path="resultados_grid.json"):
     print("Importando dataset...")
     data = pd.read_csv("data/wdbc.data", header=None)
     analisar_dados(data)
@@ -76,67 +76,66 @@ def main():
     # Coluna da classe
     y = data.iloc[:, 1].values
     y = (y == 'M').astype(int) # Convertendo numérica (binário)
-
     metricas = ['accuracy', 'f1', 'recall', 'precision']
     modelos = [
         ("KNN", KNNModelo()),
         ("Árvore de Decisão", ArvoreDecisaoModelo())
     ]
-
     proporcoes = [(treino/100, 1-treino/100) for treino in range(5, 100, 5)]
+    resultados = {}
+    for prop_treino, prop_teste in proporcoes:
+        print(f"\n==== Proporção treino/teste: {int(prop_treino*100)}%/{int(prop_teste*100)}% ====")
+        try:
+            X_train, X_test, y_train, y_test = model_selection.train_test_split(
+                X, y, test_size=prop_teste, random_state=42, stratify=y
+            )
+        except ValueError as e:
+            print(f"[EXCEÇÃO] Falha ao dividir dados para proporção {int(prop_treino*100)}%/{int(prop_teste*100)}%: {e}")
+            continue
+        print(f"Tamanho treino: {X_train.shape[0]}")
+        print(f"Tamanho teste: {X_test.shape[0]}")
+        params = {
+            'X_train': X_train,
+            'y_train': y_train,
+            'X_test': X_test,
+            'y_test': y_test
+        }
+        for nome_modelo, modelo in modelos:
+            #print(f"\n==== {nome_modelo} ====")
+            if nome_modelo not in resultados:
+                resultados[nome_modelo] = {}
+            if f"{int(prop_treino*100)}%/{int(prop_teste*100)}%" not in resultados[nome_modelo]:
+                resultados[nome_modelo][f"{int(prop_treino*100)}%/{int(prop_teste*100)}%"] = {}
+            for metrica in metricas:
+                params['metrica'] = metrica
+                #print(f"\n--- Avaliando métrica: {metrica} ---")
+                grid = modelo.train(**params)
+                best_estimator = grid.best_estimator_
+                score_treino = best_estimator.score(X_train, y_train)
+                score_teste = best_estimator.score(X_test, y_test)
+                if nome_modelo == "KNN":
+                    melhor = grid.best_params_['n_neighbors']
+                else:
+                    melhor = grid.best_params_
+                resultados[nome_modelo][f"{int(prop_treino*100)}%/{int(prop_teste*100)}%"].setdefault(metrica, {})
+                resultados[nome_modelo][f"{int(prop_treino*100)}%/{int(prop_teste*100)}%"] [metrica] = {
+                    'melhor_param': melhor,
+                    'score_treino': score_treino,
+                    'score_teste': score_teste
+                }
+    with open(resultados_path, "w") as f:
+        json.dump(resultados, f, indent=2)
+
+def main():
     resultados_path = "resultados_grid.json"
     
     if os.path.exists(resultados_path):
         print("[INFO] Resultados já existem. Pulando treinamento e carregando do JSON...")
-        with open(resultados_path, "r") as f:
-            resultados = json.load(f)
     else:
-        resultados = {}
-        for prop_treino, prop_teste in proporcoes:
-            print(f"\n==== Proporção treino/teste: {int(prop_treino*100)}%/{int(prop_teste*100)}% ====")
-            try:
-                X_train, X_test, y_train, y_test = model_selection.train_test_split(
-                    X, y, test_size=prop_teste, random_state=42, stratify=y
-                )
-            except ValueError as e:
-                print(f"[EXCEÇÃO] Falha ao dividir dados para proporção {int(prop_treino*100)}%/{int(prop_teste*100)}%: {e}")
-                continue
-            print(f"Tamanho treino: {X_train.shape[0]}")
-            print(f"Tamanho teste: {X_test.shape[0]}")
-            params = {
-                'X_train': X_train,
-                'y_train': y_train,
-                'X_test': X_test,
-                'y_test': y_test
-            }
-            for nome_modelo, modelo in modelos:
-                #print(f"\n==== {nome_modelo} ====")
-                if nome_modelo not in resultados:
-                    resultados[nome_modelo] = {}
-                if f"{int(prop_treino*100)}%/{int(prop_teste*100)}%" not in resultados[nome_modelo]:
-                    resultados[nome_modelo][f"{int(prop_treino*100)}%/{int(prop_teste*100)}%"] = {}
-                for metrica in metricas:
-                    params['metrica'] = metrica
-                    #print(f"\n--- Avaliando métrica: {metrica} ---")
-                    grid = modelo.train(**params)
-                    best_estimator = grid.best_estimator_
-                    score_treino = best_estimator.score(X_train, y_train)
-                    score_teste = best_estimator.score(X_test, y_test)
-                    if nome_modelo == "KNN":
-                        melhor = grid.best_params_['n_neighbors']
-                    else:
-                        melhor = grid.best_params_
-                    resultados[nome_modelo][f"{int(prop_treino*100)}%/{int(prop_teste*100)}%"].setdefault(metrica, {})
-                    resultados[nome_modelo][f"{int(prop_treino*100)}%/{int(prop_teste*100)}%"] [metrica] = {
-                        'melhor_param': melhor,
-                        'score_treino': score_treino,
-                        'score_teste': score_teste
-                    }
-        with open(resultados_path, "w") as f:
-            json.dump(resultados, f, indent=2)
+        treinar_modelos()
 
-    # print_resumo_resultados(resultados)
-                      
+    with open(resultados_path, "r") as f:
+            resultados = json.load(f)
     
     # Inicializar visualizador interativo
     print("\n[INFO] Abrindo visualizador interativo...")
