@@ -57,7 +57,6 @@ class ArvoreDecisaoModelo(Modelo):
 
 class NaiveBayesModelo(Modelo):
     def __init__(self):
-        super().__init__("Naive Bayes")
         self.classificador = GaussianNB()
 
     def train(self, *, X_train, y_train, X_test, y_test, metrica='accuracy'):
@@ -73,7 +72,6 @@ class NaiveBayesModelo(Modelo):
 
 class RegressaoLogisticaModelo(Modelo):
     def __init__(self):
-        super().__init__("Regressão Logística")
         self.classificador = LogisticRegression(
             solver='liblinear',  # bom para conjuntos pequenos
             penalty='l2',

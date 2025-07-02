@@ -1142,5 +1142,1225 @@
         "score_teste": 0.9655172413793104
       }
     }
+  },
+  "Naive Bayes": {
+    "5%/95%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.933456561922366
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.933456561922366
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.933456561922366
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.933456561922366
+      }
+    },
+    "10%/90%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9464285714285714,
+        "score_teste": 0.9395711500974658
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9464285714285714,
+        "score_teste": 0.9395711500974658
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9464285714285714,
+        "score_teste": 0.9395711500974658
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9464285714285714,
+        "score_teste": 0.9395711500974658
+      }
+    },
+    "15%/85%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9411764705882353,
+        "score_teste": 0.9359504132231405
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9411764705882353,
+        "score_teste": 0.9359504132231405
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9411764705882353,
+        "score_teste": 0.9359504132231405
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9411764705882353,
+        "score_teste": 0.9359504132231405
+      }
+    },
+    "20%/80%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9380530973451328,
+        "score_teste": 0.9385964912280702
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9380530973451328,
+        "score_teste": 0.9385964912280702
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9380530973451328,
+        "score_teste": 0.9385964912280702
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9380530973451328,
+        "score_teste": 0.9385964912280702
+      }
+    },
+    "25%/75%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9366197183098591,
+        "score_teste": 0.936768149882904
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9366197183098591,
+        "score_teste": 0.936768149882904
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9366197183098591,
+        "score_teste": 0.936768149882904
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9366197183098591,
+        "score_teste": 0.936768149882904
+      }
+    },
+    "30%/70%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9352941176470588,
+        "score_teste": 0.9373433583959899
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9352941176470588,
+        "score_teste": 0.9373433583959899
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9352941176470588,
+        "score_teste": 0.9373433583959899
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9352941176470588,
+        "score_teste": 0.9373433583959899
+      }
+    },
+    "35%/65%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9396984924623115,
+        "score_teste": 0.9405405405405406
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9396984924623115,
+        "score_teste": 0.9405405405405406
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9396984924623115,
+        "score_teste": 0.9405405405405406
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9396984924623115,
+        "score_teste": 0.9405405405405406
+      }
+    },
+    "40%/60%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9383259911894273,
+        "score_teste": 0.9385964912280702
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9383259911894273,
+        "score_teste": 0.9385964912280702
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9383259911894273,
+        "score_teste": 0.9385964912280702
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9383259911894273,
+        "score_teste": 0.9385964912280702
+      }
+    },
+    "45%/55%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9453125,
+        "score_teste": 0.9424920127795527
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9453125,
+        "score_teste": 0.9424920127795527
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9453125,
+        "score_teste": 0.9424920127795527
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9453125,
+        "score_teste": 0.9424920127795527
+      }
+    },
+    "50%/50%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9507042253521126,
+        "score_teste": 0.9368421052631579
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9507042253521126,
+        "score_teste": 0.9368421052631579
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9507042253521126,
+        "score_teste": 0.9368421052631579
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9507042253521126,
+        "score_teste": 0.9368421052631579
+      }
+    },
+    "55%/44%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9519230769230769,
+        "score_teste": 0.933852140077821
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9519230769230769,
+        "score_teste": 0.933852140077821
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9519230769230769,
+        "score_teste": 0.933852140077821
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9519230769230769,
+        "score_teste": 0.933852140077821
+      }
+    },
+    "60%/40%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9501466275659824,
+        "score_teste": 0.9298245614035088
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9501466275659824,
+        "score_teste": 0.9298245614035088
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9501466275659824,
+        "score_teste": 0.9298245614035088
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9501466275659824,
+        "score_teste": 0.9298245614035088
+      }
+    },
+    "65%/35%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9539295392953929,
+        "score_teste": 0.93
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9539295392953929,
+        "score_teste": 0.93
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9539295392953929,
+        "score_teste": 0.93
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9539295392953929,
+        "score_teste": 0.93
+      }
+    },
+    "70%/30%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.949748743718593,
+        "score_teste": 0.935672514619883
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.949748743718593,
+        "score_teste": 0.935672514619883
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.949748743718593,
+        "score_teste": 0.935672514619883
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.949748743718593,
+        "score_teste": 0.935672514619883
+      }
+    },
+    "75%/25%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9483568075117371,
+        "score_teste": 0.9440559440559441
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9483568075117371,
+        "score_teste": 0.9440559440559441
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9483568075117371,
+        "score_teste": 0.9440559440559441
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9483568075117371,
+        "score_teste": 0.9440559440559441
+      }
+    },
+    "80%/19%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9428571428571428,
+        "score_teste": 0.9385964912280702
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9428571428571428,
+        "score_teste": 0.9385964912280702
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9428571428571428,
+        "score_teste": 0.9385964912280702
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9428571428571428,
+        "score_teste": 0.9385964912280702
+      }
+    },
+    "85%/15%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.937888198757764,
+        "score_teste": 0.9534883720930233
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.937888198757764,
+        "score_teste": 0.9534883720930233
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.937888198757764,
+        "score_teste": 0.9534883720930233
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.937888198757764,
+        "score_teste": 0.9534883720930233
+      }
+    },
+    "90%/9%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.939453125,
+        "score_teste": 0.9473684210526315
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.939453125,
+        "score_teste": 0.9473684210526315
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.939453125,
+        "score_teste": 0.9473684210526315
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.939453125,
+        "score_teste": 0.9473684210526315
+      }
+    },
+    "95%/5%": {
+      "accuracy": {
+        "melhor_param": {},
+        "score_treino": 0.9407407407407408,
+        "score_teste": 0.9310344827586207
+      },
+      "f1": {
+        "melhor_param": {},
+        "score_treino": 0.9407407407407408,
+        "score_teste": 0.9310344827586207
+      },
+      "recall": {
+        "melhor_param": {},
+        "score_treino": 0.9407407407407408,
+        "score_teste": 0.9310344827586207
+      },
+      "precision": {
+        "melhor_param": {},
+        "score_treino": 0.9407407407407408,
+        "score_teste": 0.9310344827586207
+      }
+    }
+  },
+  "Regress\u00e3o Log\u00edstica": {
+    "5%/95%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 0.01,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.9038817005545287
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 0.01,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.9038817005545287
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 0.01,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.9038817005545287
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 0.01,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.9038817005545287
+      }
+    },
+    "10%/90%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 0.01,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.9259259259259259
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 1,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.9454191033138402
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 1,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.9454191033138402
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 0.01,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9285714285714286,
+        "score_teste": 0.9259259259259259
+      }
+    },
+    "15%/85%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 1.0,
+        "score_teste": 0.9442148760330579
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 1.0,
+        "score_teste": 0.9442148760330579
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9882352941176471,
+        "score_teste": 0.9359504132231405
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 1.0,
+        "score_teste": 0.9442148760330579
+      }
+    },
+    "20%/80%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9823008849557522,
+        "score_teste": 0.9495614035087719
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9823008849557522,
+        "score_teste": 0.9495614035087719
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9823008849557522,
+        "score_teste": 0.9495614035087719
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9823008849557522,
+        "score_teste": 0.9495614035087719
+      }
+    },
+    "25%/75%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9788732394366197,
+        "score_teste": 0.9461358313817331
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9788732394366197,
+        "score_teste": 0.9461358313817331
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9788732394366197,
+        "score_teste": 0.9461358313817331
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9788732394366197,
+        "score_teste": 0.9461358313817331
+      }
+    },
+    "30%/70%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9647058823529412,
+        "score_teste": 0.9598997493734336
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9647058823529412,
+        "score_teste": 0.9598997493734336
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9647058823529412,
+        "score_teste": 0.9598997493734336
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9647058823529412,
+        "score_teste": 0.9598997493734336
+      }
+    },
+    "35%/65%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9849246231155779,
+        "score_teste": 0.9567567567567568
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9849246231155779,
+        "score_teste": 0.9567567567567568
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9748743718592965,
+        "score_teste": 0.9540540540540541
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 0.01,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9396984924623115,
+        "score_teste": 0.9216216216216216
+      }
+    },
+    "40%/60%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9823788546255506,
+        "score_teste": 0.9444444444444444
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9823788546255506,
+        "score_teste": 0.9444444444444444
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9823788546255506,
+        "score_teste": 0.9444444444444444
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9823788546255506,
+        "score_teste": 0.9444444444444444
+      }
+    },
+    "45%/55%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.96484375,
+        "score_teste": 0.952076677316294
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.96484375,
+        "score_teste": 0.952076677316294
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.96484375,
+        "score_teste": 0.952076677316294
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.96484375,
+        "score_teste": 0.952076677316294
+      }
+    },
+    "50%/50%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9683098591549296,
+        "score_teste": 0.9578947368421052
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9683098591549296,
+        "score_teste": 0.9578947368421052
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9683098591549296,
+        "score_teste": 0.9578947368421052
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 0.01,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9295774647887324,
+        "score_teste": 0.9368421052631579
+      }
+    },
+    "55%/44%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9711538461538461,
+        "score_teste": 0.9571984435797666
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9711538461538461,
+        "score_teste": 0.9571984435797666
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9711538461538461,
+        "score_teste": 0.9571984435797666
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 0.01,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9326923076923077,
+        "score_teste": 0.9377431906614786
+      }
+    },
+    "60%/40%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9794721407624634,
+        "score_teste": 0.9473684210526315
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9706744868035191,
+        "score_teste": 0.9517543859649122
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9706744868035191,
+        "score_teste": 0.9517543859649122
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9794721407624634,
+        "score_teste": 0.9473684210526315
+      }
+    },
+    "65%/35%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9728997289972899,
+        "score_teste": 0.945
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.975609756097561,
+        "score_teste": 0.945
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.975609756097561,
+        "score_teste": 0.945
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9728997289972899,
+        "score_teste": 0.945
+      }
+    },
+    "70%/30%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9824120603015075,
+        "score_teste": 0.9415204678362573
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9824120603015075,
+        "score_teste": 0.9415204678362573
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9824120603015075,
+        "score_teste": 0.9415204678362573
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9824120603015075,
+        "score_teste": 0.9415204678362573
+      }
+    },
+    "75%/25%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9765258215962441,
+        "score_teste": 0.9370629370629371
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9765258215962441,
+        "score_teste": 0.9370629370629371
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9765258215962441,
+        "score_teste": 0.9370629370629371
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9765258215962441,
+        "score_teste": 0.9370629370629371
+      }
+    },
+    "80%/19%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9736263736263736,
+        "score_teste": 0.9385964912280702
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9758241758241758,
+        "score_teste": 0.9298245614035088
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9758241758241758,
+        "score_teste": 0.9298245614035088
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9736263736263736,
+        "score_teste": 0.9385964912280702
+      }
+    },
+    "85%/15%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.968944099378882,
+        "score_teste": 0.9651162790697675
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.968944099378882,
+        "score_teste": 0.9651162790697675
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.968944099378882,
+        "score_teste": 0.9651162790697675
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.968944099378882,
+        "score_teste": 0.9651162790697675
+      }
+    },
+    "90%/9%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.974609375,
+        "score_teste": 0.9824561403508771
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.974609375,
+        "score_teste": 0.9824561403508771
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.974609375,
+        "score_teste": 0.9824561403508771
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.974609375,
+        "score_teste": 0.9824561403508771
+      }
+    },
+    "95%/5%": {
+      "accuracy": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9685185185185186,
+        "score_teste": 0.9310344827586207
+      },
+      "f1": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9685185185185186,
+        "score_teste": 0.9310344827586207
+      },
+      "recall": {
+        "melhor_param": {
+          "C": 10,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9685185185185186,
+        "score_teste": 0.9310344827586207
+      },
+      "precision": {
+        "melhor_param": {
+          "C": 100,
+          "max_iter": 1000,
+          "penalty": "l2",
+          "solver": "liblinear"
+        },
+        "score_treino": 0.9685185185185186,
+        "score_teste": 0.9310344827586207
+      }
+    }
   }
 }
